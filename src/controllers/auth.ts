@@ -27,7 +27,6 @@ export const validate: RequestHandler = (req, res, next) => {
   const token = req.headers.authorization.split(' ')[1]
   if(!auth.validateToken(token)){
     return res.status(403).json({error: 'Acesso negado'})
-
   }
   next()
 }

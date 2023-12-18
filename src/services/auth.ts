@@ -9,14 +9,15 @@ export const validatePassword = (password: string): boolean => {
 
 export const createToken = () => {
   const currentPassword = getToday().split('/').join('')
-  return ` ${process.env.DEFAULT_TOKEN}${currentPassword}`
+  return `${process.env.DEFAULT_TOKEN}${currentPassword}`
 
 }
 
 export const validateToken = (token: string) => {
   const currentToken = createToken()
-  console.log(currentToken)
+ //console.log(currentToken)
   return token === currentToken
   
  // console.log(token) 321665411122023 - token 321665411122023 - currrentToken
+ //Comente " Eu quero" e te envio o link do produto.
 }
